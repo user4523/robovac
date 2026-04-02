@@ -418,7 +418,11 @@ class RoboVacEntity(StateVacuumEntity):
             self._attr_supported_features = VacuumEntityFeature(features)
             self._attr_robovac_supported = self.vacuum.getRoboVacFeatures()
             self._attr_activity_mapping = self.vacuum.getRoboVacActivityMapping()
-            self._attr_fan_speed_list = self.vacuum.getFanSpeeds()
+            all_speeds = self.vacuum.getFanSpeeds()
+            if self._attr_name in ["RoboVac EG", "RoboVac OG"]:
+                self._attr_fan_speed_list = [s for s in all_speeds if s in ["Standard", "Max"]]
+            else:
+                self._attr_fan_speed_list = all_speeds
 
             _LOGGER.debug(
                 "Vacuum %s supports features: %s",
@@ -713,7 +717,6 @@ class RoboVacEntity(StateVacuumEntity):
         if cleaning_time is not None:
             self._attr_cleaning_time = str(cleaning_time)
 
-            # Update other attributes using model-specific DPS codes
             auto_return = self.tuyastatus.get(self.get_dps_code("AUTO_RETURN"))
             self._attr_auto_return = str(auto_return) if auto_return is not None else None
 
