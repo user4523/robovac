@@ -1,3 +1,7 @@
+IMPORTANT!!!
+
+Hi folks! I’ve made some changes to the 1.3.1 release to make the Eufy G10 Hybrid work properly. In addition, I’ve added the ability to change the auto return mode directly from the UI under Details. Moreover, I adjusted the vacuum modes to match the robot’s functionality.
+
 # Eufy RobovVac control for Home Assistant
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
