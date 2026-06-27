@@ -5,7 +5,7 @@ Hi folks! I’ve made some changes to the 1.3.1 release to make the Eufy G10 Hyb
 # Eufy RobovVac control for Home Assistant
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
-[![Sponsor me on Github Sponsors](https://img.shields.io/badge/Sponsor-ea4aaa?style=for-the-badge&logo=github-sponsors&logoColor=%23EA4AAA&labelColor=white)](https://github.com/sponsors/damacus)
+
 
 A Eufy RoboVac integration for Home Assistant.
 
